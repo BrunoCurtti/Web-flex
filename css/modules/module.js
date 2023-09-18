@@ -24,6 +24,8 @@ const upBtn = document.querySelector("#upBtn");
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     toggleMenu.setAttribute("data-visible", true);
+    toggleBtn.setAttribute("aria-expanded", true);
+    toggleBtn.firstElementChild.classList.remove("hidden");
     toggleBtn.lastElementChild.classList.add("hidden");
   });
 });
